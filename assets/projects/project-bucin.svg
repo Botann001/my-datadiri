@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="bucinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff4d79"/>
+      <stop offset="100%" stop-color="#ff2f3d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="#0b0b0d"/>
+  <!-- Persona cut-out shapes -->
+  <path d="M-80 520L820-80h480L440 730z" fill="url(#bucinGrad)"/>
+  <path d="M720-30h520v140L510 675H90z" fill="#b80e23" opacity=".6"/>
+  
+  <!-- Hearts & sparkles -->
+  <g fill="#ffffff" opacity=".9">
+    <path d="M1030 180c-25-35-80-15-80 30 0 45 80 85 80 85s80-40 80-85c0-45-55-65-80-30z"/>
+    <path d="M890 280c-15-20-50-10-50 18 0 28 50 52 50 52s50-24 50-52c0-28-35-38-50-18z" opacity=".7"/>
+  </g>
+
+  <!-- Typography -->
+  <g fill="#fff" font-family="Arial Black,Impact,sans-serif">
+    <text x="70" y="120" font-size="32" letter-spacing="8">PROYEK INTERAKTIF</text>
+    <text x="70" y="260" font-size="90">PROJECT BUCIN</text>
+    <text x="74" y="325" font-size="30" letter-spacing="4">INTERACTIVE LOVE WEB APP</text>
+  </g>
+  <rect x="72" y="375" width="450" height="8" fill="#fff"/>
+  <text x="72" y="440" fill="#fff" font-size="26" font-family="Arial,sans-serif">HTML · CSS · JavaScript Interaktif</text>
+  
+  <!-- Action arrow badge -->
+  <circle cx="1030" cy="505" r="105" fill="#fff"/>
+  <path d="M985 505h96m-35-35 35 35-35 35" fill="none" stroke="#0b0b0d" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

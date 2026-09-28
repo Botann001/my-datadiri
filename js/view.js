@@ -16,6 +16,8 @@ const View = {
     repoStatus: document.getElementById("repo-status"),
     skillsBody: document.getElementById("skills-body"),
     sfx:        document.getElementById("sfx-select"),
+    bgmPlayer:  document.getElementById("bgm-player"),
+    bgmToggle:  document.getElementById("bgm-toggle"),
     cursor:     document.getElementById("cursor"),
     clock:      document.getElementById("clock"),
   },
@@ -27,6 +29,7 @@ const View = {
     this.els.menuItems = [...document.querySelectorAll(".menu-item")];
     document.querySelectorAll("[data-ransom]").forEach(el => this.ransomize(el));
     this.els.sfx.volume = 0.45;
+    if (this.els.bgmPlayer) this.els.bgmPlayer.volume = 0.4;
     this.startClock();
     this.startParallax();
     this.startCursor();
@@ -57,10 +60,10 @@ const View = {
       span.style.transform = t;
     const variant = (h >> 7) % 10;
 
-// Force specific letters to have black boxes
+// Huruf aksen khusus pada nama utama
 if (
-  (text === "NUMAL" && c === "M") ||
-  (text === "DAS" && c === "S")
+  (text === "MUHAMMAD" && i === 0) ||
+  (text === "OKTA MAULANA" && i === 5)
 ) {
   span.classList.add("box");
 }
@@ -110,6 +113,25 @@ el.appendChild(span);
     } catch {}
   },
 
+  updateBgmUI(isPlaying) {
+    if (!this.els.bgmToggle) return;
+    this.els.bgmToggle.classList.toggle("playing", isPlaying);
+    const label = this.els.bgmToggle.querySelector(".bgm-label");
+    const icon = this.els.bgmToggle.querySelector(".bgm-icon");
+    if (label) label.textContent = isPlaying ? "BGM: ON" : "BGM: OFF";
+    if (icon) icon.textContent = isPlaying ? "■" : "▶";
+  },
+
+  playBgm() {
+    if (!this.els.bgmPlayer) return Promise.reject();
+    return this.els.bgmPlayer.play();
+  },
+
+  pauseBgm() {
+    if (!this.els.bgmPlayer) return;
+    this.els.bgmPlayer.pause();
+  },
+
   /* ---------- Project cards ---------- */
   cardThumb(src) {
     return `<div class="thumb"><img src="${src}" alt="" loading="lazy"
@@ -135,7 +157,7 @@ el.appendChild(span);
         <span class="lang" style="--lc:${f.color}">${f.tag}</span>
         <h3>${f.live ? '<span class="live-dot"></span>' : ""}${this.splitTitle(f.title)}</h3>
         <p>${f.desc}</p>
-        <div class="meta"><span>${f.live ? "LIVE NOW" : "HIGHLIGHT"}</span><span class="go">${f.cta}</span></div>`;
+        <div class="meta"><span>${f.live ? "ONLINE" : "PROYEK PILIHAN"}</span><span class="go">${f.cta}</span></div>`;
       this.els.featGrid.appendChild(a);
     });
   },
@@ -156,10 +178,10 @@ el.appendChild(span);
         ${this.cardThumb(img)}
         <span class="lang">${r.language || "Repo"}</span>
         <h3>${this.splitTitle(pretty)}</h3>
-        <p>${r.description || "No description yet, but the code speaks for itself."}</p>
+        <p>${r.description || "Deskripsi proyek belum tersedia."}</p>
         <div class="meta">
           <span>★ ${r.stargazers_count || 0}</span>
-          <span class="go">View on GitHub →</span>
+          <span class="go">Lihat di GitHub →</span>
         </div>`;
       this.els.repoGrid.appendChild(a);
     });
@@ -196,7 +218,7 @@ el.appendChild(span);
   startClock() {
     setInterval(() => {
       this.els.clock.textContent =
-        new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }) + " · IND";
+        new Date().toLocaleTimeString("id-ID", { hour: "2-digit", minute: "2-digit" }) + " · WITA";
     }, 1000);
   },
 

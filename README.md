@@ -1,54 +1,24 @@
-# Persona-Style Portfolio — Numal Das
+# Portofolio Muhammad Okta Maulana
 
-A Persona menu-inspired portfolio, structured as Model–View–Controller.
+Portofolio interaktif bergaya menu Persona yang telah dipersonalisasi dalam Bahasa Indonesia.
 
-## Structure
+## Isi portofolio
 
-```
-├── index.html            View skeleton — markup only, no logic or styles
-├── css/
-│   └── style.css         All styling (theme colors in :root at the top)
-├── js/
-│   ├── model.js          DATA — projects, skills, GitHub fetch, app state
-│   ├── view.js           DOM — rendering, ransom lettering, wipe, cursor, sound
-│   └── controller.js     EVENTS — keyboard/mouse input, navigation logic
-└── assets/
-    ├── sfx/select.mp3    Menu sound (plays on select/confirm)
-    ├── cursors/          Animated cursor sprite strips (30 frames each)
-    ├── menus/            per-screen backgrounds: home.jpg, skills.jpg, about.jpg,
-    │                     contact.jpg (included) — add projects.jpg to complete the set
-    ├── cv/               your downloadable CV (linked from About + Contact)
-    ├── hero.png          ← optional: extra art layered on the home screen
-    ├── me.jpg            ← add: your photo for the About polaroid
-    └── projects/         ← add: card thumbnails
-        ├── bsl.png, medcnn.png, gesture.png, rapidcheck.png   (featured)
-        └── <RepoName>.png  (auto-matched to GitHub repos by exact name)
-```
+- Profil Muhammad Okta Maulana
+- Pendidikan S1 Sistem Informasi
+- Keahlian PHP Native, HTML, MySQL, dan vibe coding
+- Proyek website MAN 2 Hulu Sungai Utara
+- Proyek web interaktif Project Bucin
+- Kontak WhatsApp
 
-Missing images hide themselves — no broken icons.
+## Menjalankan secara lokal
 
-The video folder inside assets are not uploaded as they exceed 500MB. I recommand downloading them online and add them inside assets in a new video folder later on. 
+Gunakan ekstensi **Live Server** di VS Code:
 
-## Editing content
+1. Buka `index.html`.
+2. Klik kanan, lalu pilih **Open with Live Server**.
+3. Website akan terbuka di browser dan diperbarui otomatis saat file disimpan.
 
-Everything you'd normally want to change lives in **js/model.js**:
-featured projects, skill bars, thumbnail overrides, your GitHub username.
-Bio and contact links are plain HTML in **index.html**.
-Colors are CSS variables at the top of **css/style.css**.
+## GitHub Pages
 
-## Run locally
-
-```
-python3 -m http.server
-```
-then open http://localhost:8000 — opening index.html directly (file://)
-blocks the audio fetch and GitHub API in most browsers.
-
-## Deploy
-
-Push the whole folder to a GitHub repo, enable Pages
-(Settings → Pages → Deploy from branch → main → / root). Done.
-
-## Controls
-
-↑ / ↓ select · Enter confirm · Esc back · click the name to go home
+Unggah seluruh isi folder ini ke repository GitHub. Setelah itu buka **Settings → Pages**, pilih **Deploy from a branch**, lalu gunakan branch `main` dan folder `/ (root)`.

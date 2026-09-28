@@ -8,56 +8,12 @@ const Controller = {
   audioUnlocked: false,
 
   init() {
-  View.init();
-  this.bindMenu();
-  this.bindKeyboard();
-  this.bindAudioUnlock();
-  this.bindAudioButton();
-  this.bindContactForm();
-},
-
-  /* ---------- Contact form (relayed via formsubmit.co, mailto fallback) ---------- */
-  bindContactForm() {
-    const form = document.getElementById("contact-form");
-    if (!form) return;
-    const status = document.getElementById("form-status");
-    const btn = form.querySelector(".form-send");
-
-    form.addEventListener("submit", async e => {
-      e.preventDefault();
-      const data = Object.fromEntries(new FormData(form).entries());
-      if (data._honey) return;  // honeypot caught a bot
-      if (!data.name.trim() || !data.email.trim() || !data.message.trim()) {
-        status.textContent = "Fill in all three fields first.";
-        return;
-      }
-      btn.disabled = true;
-      status.textContent = "Sending…";
-      try {
-        const res = await fetch(`https://formsubmit.co/ajax/${Model.contactEmail}`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json", "Accept": "application/json" },
-          body: JSON.stringify({
-            name: data.name,
-            email: data.email,
-            message: data.message,
-            _subject: `Portfolio message from ${data.name}`,
-          }),
-        });
-        if (!res.ok) throw new Error(res.status);
-        status.textContent = "Sent! I'll get back to you soon.";
-        form.reset();
-        this.play();
-      } catch {
-        // relay unreachable: open the visitor's own mail app instead
-        status.textContent = "Couldn't reach the relay, opening your email app instead…";
-        const subject = encodeURIComponent(`Portfolio message from ${data.name}`);
-        const body = encodeURIComponent(`${data.message}\n\nReply to: ${data.email}`);
-        location.href = `mailto:${Model.contactEmail}?subject=${subject}&body=${body}`;
-      } finally {
-        btn.disabled = false;
-      }
-    });
+    View.init();
+    this.bindMenu();
+    this.bindKeyboard();
+    this.bindAudioUnlock();
+    this.bindBgm();
+    this.tryAutoPlayBgm();
   },
 
   /* ---------- Navigation ---------- */
@@ -88,12 +44,6 @@ goTo(screen) {
   /* ---------- Screen data loading ---------- */
   async loadProjects() {
     View.renderFeatured(Model.featured);
-    if (Model.state.reposLoaded) return;
-    const { repos, live } = await Model.fetchRepos();
-    const status = live
-      ? `${repos.length} repositories · live from GitHub`
-      : "Showing pinned work · GitHub API unavailable right now";
-    View.renderRepos(repos, status, Model);
     Model.state.reposLoaded = true;
   },
 
@@ -110,44 +60,95 @@ goTo(screen) {
     if (this.audioUnlocked) View.playSelect();
   },
 
- bindAudioUnlock() {
-  const unlock = () => {
-    this.audioUnlocked = true;
-
-    const video = document.getElementById("home-video");
-
-    if (video) {
-      video.muted = false;
-      video.volume = 0.5;
-      video.play().catch(() => {});
-    }
-  };
-
-  addEventListener("pointerdown", unlock, { once: true, capture: true });
-  addEventListener("keydown", unlock, { once: true, capture: true });
-},
-  bindAudioButton() {
-    const button = document.getElementById("audio-toggle");
-    const video = document.getElementById("home-video");
-
-    if (!button || !video) return;
-
-    button.addEventListener("click", (e) => {
-      e.stopPropagation();
-
-      video.muted = !video.muted;
-
-      if (!video.muted) {
-        video.play().catch(() => {});
-        button.textContent = "🔊";
-        button.setAttribute("aria-label", "Mute audio");
+  toggleBgm() {
+    if (Model.state.bgmPlaying) {
+      View.pauseBgm();
+      Model.state.bgmPlaying = false;
+      View.updateBgmUI(false);
+    } else {
+      const p = View.playBgm();
+      if (p && p.then) {
+        p.then(() => {
+          Model.state.bgmPlaying = true;
+          View.updateBgmUI(true);
+        }).catch(() => {});
       } else {
-        button.textContent = "🔇";
-        button.setAttribute("aria-label", "Turn audio on");
+        Model.state.bgmPlaying = true;
+        View.updateBgmUI(true);
       }
-    });
+    }
   },
 
+  bindBgm() {
+    if (View.els.bgmToggle) {
+      View.els.bgmToggle.addEventListener("click", e => {
+        e.stopPropagation();
+        this.toggleBgm();
+      });
+    }
+
+    if (View.els.bgmPlayer) {
+      View.els.bgmPlayer.addEventListener("play", () => {
+        Model.state.bgmPlaying = true;
+        View.updateBgmUI(true);
+      });
+      View.els.bgmPlayer.addEventListener("pause", () => {
+        Model.state.bgmPlaying = false;
+        View.updateBgmUI(false);
+      });
+    }
+  },
+
+  tryAutoPlayBgm() {
+    const p = View.playBgm();
+    if (p && p.then) {
+      p.then(() => {
+        this.audioUnlocked = true;
+        Model.state.bgmPlaying = true;
+        View.updateBgmUI(true);
+      }).catch(() => {
+        // Jika diblokir oleh browser autoplay policy, pasang listener interaksi instan pertama
+        const startOnGesture = () => {
+          this.audioUnlocked = true;
+          if (!Model.state.bgmPlaying) {
+            const playPromise = View.playBgm();
+            if (playPromise && playPromise.then) {
+              playPromise.then(() => {
+                Model.state.bgmPlaying = true;
+                View.updateBgmUI(true);
+              }).catch(() => {});
+            }
+          }
+          ["pointerdown", "click", "keydown", "touchstart"].forEach(evt => {
+            removeEventListener(evt, startOnGesture, { capture: true });
+          });
+        };
+
+        ["pointerdown", "click", "keydown", "touchstart"].forEach(evt => {
+          addEventListener(evt, startOnGesture, { once: true, capture: true });
+        });
+      });
+    }
+  },
+
+  bindAudioUnlock() {
+    const unlock = () => {
+      this.audioUnlocked = true;
+      if (!Model.state.bgmPlaying) {
+        const p = View.playBgm();
+        if (p && p.then) {
+          p.then(() => {
+            Model.state.bgmPlaying = true;
+            View.updateBgmUI(true);
+          }).catch(() => {});
+        }
+      }
+    };
+
+    ["pointerdown", "click", "keydown", "touchstart"].forEach(evt => {
+      addEventListener(evt, unlock, { once: true, capture: true });
+    });
+  },
   /* ---------- Input bindings ---------- */
   bindMenu() {
     View.els.menuItems.forEach((item, i) => {
@@ -175,6 +176,9 @@ goTo(screen) {
         }
       } else if (e.key === "Escape") {
         this.goTo("home");
+      }
+      if (e.key === "m" || e.key === "M") {
+        this.toggleBgm();
       }
     });
   },

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#0b0b0d"/>
+  <path d="M-80 550L770-70h510L420 730z" fill="#ff2f3d"/>
+  <path d="M700-20h540v120L530 675H120z" fill="#b80e23" opacity=".7"/>
+  <g fill="#fff" font-family="Arial Black,Arial,sans-serif">
+    <text x="70" y="120" font-size="32" letter-spacing="8">PROYEK WEBSITE</text>
+    <text x="70" y="260" font-size="96">MAN 2 HSU</text>
+    <text x="74" y="325" font-size="34" letter-spacing="3">HULU SUNGAI UTARA</text>
+  </g>
+  <rect x="72" y="380" width="410" height="8" fill="#fff"/>
+  <text x="72" y="448" fill="#fff" font-size="26" font-family="Arial,sans-serif">PHP Native · HTML · MySQL</text>
+  <circle cx="1030" cy="505" r="105" fill="#fff"/>
+  <path d="M985 505h96m-35-35 35 35-35 35" fill="none" stroke="#0b0b0d" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
