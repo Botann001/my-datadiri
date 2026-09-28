@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="palaceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff2f3d"/>
+      <stop offset="50%" stop-color="#b80e23"/>
+      <stop offset="100%" stop-color="#111116"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="#0b0b0d"/>
+  
+  <!-- Persona 5 Palace infiltration sharp cuts -->
+  <path d="M-80 540L820-80h480L440 730z" fill="url(#palaceGrad)"/>
+  <path d="M720-30h520v140L510 675H90z" fill="#ff2f3d" opacity=".6"/>
+  <path d="M280 700L960 50h100L380 700z" fill="#ffffff" opacity=".2"/>
+
+  <!-- Stopwatch / Timer emblem badge -->
+  <g transform="translate(930, 130)">
+    <circle cx="70" cy="70" r="65" fill="#0b0b0d" stroke="#ffffff" stroke-width="8"/>
+    <circle cx="70" cy="70" r="50" fill="#ff2f3d"/>
+    <rect x="66" y="32" width="8" height="42" fill="#ffffff" rx="4"/>
+    <rect x="66" y="66" width="30" height="8" fill="#ffffff" rx="4"/>
+    <rect x="64" y="0" width="12" height="12" fill="#ffffff"/>
+  </g>
+
+  <!-- Typography -->
+  <g fill="#fff" font-family="Arial Black,Impact,sans-serif">
+    <text x="70" y="120" font-size="32" letter-spacing="8">PERSONA 5 FOCUS TIMER</text>
+    <text x="70" y="260" font-size="82">POMODORO PALACE</text>
+    <text x="74" y="325" font-size="28" letter-spacing="4" fill="#ff2f3d">SECURE THE TREASURE · NO DISTRACTIONS</text>
+  </g>
+  <rect x="72" y="375" width="510" height="8" fill="#fff"/>
+  <text x="72" y="440" fill="#fff" font-size="26" font-family="Arial,sans-serif">Interactive Web App · Focus Timer · Streak Tracker · Audio FX</text>
+  
+  <!-- Action arrow badge -->
+  <circle cx="1030" cy="505" r="105" fill="#fff"/>
+  <path d="M985 505h96m-35-35 35 35-35 35" fill="none" stroke="#0b0b0d" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

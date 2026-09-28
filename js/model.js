@@ -39,6 +39,16 @@ const Model = {
       img: "assets/projects/velvet-task.svg",
       desc: "Aplikasi to-do tracker interaktif bertema Persona 5 & Velvet Room dengan streak counter, sound effects (SFX), dan sistem kontrak.",
     },
+    {
+      title: "POMODORO PALACE",
+      tag: "Focus Timer",
+      color: "#ff2f3d",
+      live: true,
+      url: "https://oktamaulana01.github.io/POMODORO-PALACE/",
+      cta: "Mulai fokus →",
+      img: "assets/projects/pomodoro-palace.svg",
+      desc: "Aplikasi Pomodoro timer bertema Persona 5 dengan mode Focus/Break, day streak counter, dan efek suara interaktif.",
+    },
   ],
 
   langColors: {
