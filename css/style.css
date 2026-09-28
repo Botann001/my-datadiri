@@ -54,13 +54,7 @@ body{
 
 /* big black slash behind the menu, like a torn silhouette */
 #slash{
-  position:fixed;z-index:1;inset:0;pointer-events:none;
-  background:var(--black);
-  clip-path:polygon(58% 0, 100% 0, 100% 100%, 40% 100%, 52% 62%, 45% 60%, 60% 24%, 51% 22%);
-  transition:clip-path .8s cubic-bezier(.8,0,.15,1);
-}
-body[data-screen]:not([data-screen="home"]) #slash{
-  clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 62%, 0 60%, 0 24%, 0 22%);
+  display:none;
 }
 
 /* ============ SHELL / HUD ============ */
