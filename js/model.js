@@ -39,20 +39,36 @@ const Model = {
 
   skills: [
     {
-      group: "Pemrograman & Web",
+      group: "PEMROGRAMAN & WEB",
       items: [
         ["PHP", 88],
-        ["Python", 86],
-        ["Java", 82],
+        ["PYTHON", 86],
+        ["JAVA", 82],
         ["HTML", 90],
       ],
     },
     {
-      group: "Keahlian & Pendekatan",
+      group: "AI & VIBE CODING",
       items: [
-        ["Eksplorasi Perangkat Keras", 85],
-        ["Analisis Sistem", 84],
-        ["Pemecahan Masalah", 88],
+        ["CHAT GPT", 90],
+        ["GEMINI", 88],
+        ["CLAUDE", 85],
+        ["MUSE AI", 82],
+      ],
+    },
+    {
+      group: "KEAHLIAN & REKAYASA",
+      items: [
+        ["EKSPLORASI PERANGKAT KERAS", 85],
+        ["ANALISIS SISTEM", 84],
+        ["PEMECAHAN MASALAH", 88],
+      ],
+    },
+    {
+      group: "SPOKEN LANGUAGES",
+      items: [
+        ["BAHASA INDONESIA", 100],
+        ["BAHASA INGGRIS", 40],
       ],
     },
   ],

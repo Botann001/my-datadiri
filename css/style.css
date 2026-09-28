@@ -259,17 +259,20 @@ body{
   transform:skewX(-24deg);margin-right:12px;vertical-align:baseline;}
 
 /* ---------- SKILLS ---------- */
-.skill-group{margin-bottom:5vh;max-width:920px;}
+#skills-body{
+  padding-bottom: 8vh;
+}
+.skill-group{margin-bottom:4vh;max-width:920px;}
 .skill-group h3{
   display:inline-block;background:var(--white);color:var(--black);
   font-family:'Archivo Black','Arial Black',Impact,sans-serif;
   font-size:clamp(18px,2.2vw,26px);text-transform:uppercase;
-  padding:6px 16px;transform:rotate(-1.5deg);margin-bottom:2.4vh;
+  padding:6px 16px;transform:rotate(-1.5deg);margin-bottom:2vh;
   box-shadow:5px 5px 0 var(--black);
 }
 .skill-row{display:flex;align-items:center;gap:18px;margin-bottom:12px;}
 .skill-row .name{
-  width:220px;flex-shrink:0;font-size:17px;font-weight:700;
+  width:230px;flex-shrink:0;font-size:17px;font-weight:700;
   letter-spacing:.1em;text-transform:uppercase;text-shadow:1px 1px 0 var(--black);
 }
 .skill-bar{
