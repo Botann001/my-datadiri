@@ -1,15 +1,13 @@
-# Portofolio Muhammad Okta Maulana
+# Portofolio Botan
 
-Portofolio interaktif bergaya menu Persona yang telah dipersonalisasi dalam Bahasa Indonesia.
+Portofolio interaktif bergaya menu Persona (Persona-style interactive web portfolio).
 
 ## Isi portofolio
 
-- Profil Muhammad Okta Maulana
-- Pendidikan S1 Sistem Informasi
-- Keahlian PHP Native, HTML, MySQL, dan vibe coding
-- Proyek website MAN 2 Hulu Sungai Utara
-- Proyek web interaktif Project Bucin
-- Kontak WhatsApp
+- Profil & Tentang Botan
+- Keahlian Pemrograman & Web (PHP, Python, Java, HTML, Eksplorasi Hardware)
+- Proyek Pilihan (MAN 2 HSU, Project Bucin)
+- Kontak (Email, GitHub, Instagram, & Form Kirim Pesan)
 
 ## Menjalankan secara lokal
 

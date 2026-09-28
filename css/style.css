@@ -642,37 +642,98 @@ body[data-screen="skills"] #bg-halftone {
   font-weight: 700;
   font-size: 1.05em;
 }
+
+/* =========================================================
+   CONTACT FORM - PERSONA 5 STYLE
+   ========================================================= */
+.contact-form-box {
+  background: var(--white);
+  color: var(--black);
+  padding: 24px 28px;
+  max-width: 580px;
+  transform: rotate(-1deg);
+  box-shadow: 10px 10px 0 rgba(0,0,0,.6);
+  clip-path: polygon(0 4%, 2% 0, 100% 0, 100% 94%, 98% 100%, 0 100%);
+  margin-bottom: 5vh;
+}
+.contact-form-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  border-bottom: 4px solid var(--red);
+  padding-bottom: 8px;
+}
+.contact-form-head h3 {
+  font-family: 'Archivo Black','Arial Black',Impact,sans-serif;
+  font-size: clamp(20px, 2.5vw, 28px);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--black);
+}
+.contact-form-group {
+  margin-bottom: 14px;
+}
+.contact-form-group label {
+  display: block;
+  font-family: 'Archivo Black','Arial Black',Impact,sans-serif;
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.contact-form-group input,
+.contact-form-group textarea {
+  width: 100%;
+  padding: 10px 14px;
+  background: #fbfbfb;
+  border: 2px solid var(--black);
+  font-family: 'Barlow Condensed', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--black);
+  outline: none;
+  box-shadow: 3px 3px 0 rgba(0,0,0,.15);
+  transition: border-color .15s, box-shadow .15s;
+}
+.contact-form-group input:focus,
+.contact-form-group textarea:focus {
+  border-color: var(--red);
+  box-shadow: 4px 4px 0 var(--red);
+}
+.contact-form-group textarea {
+  resize: vertical;
+  min-height: 85px;
+}
+.contact-btn-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--red);
+  color: var(--white);
+  border: 2px solid var(--white);
+  padding: 10px 22px;
+  font-family: 'Archivo Black','Arial Black',Impact,sans-serif;
+  font-size: 16px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  transform: skewX(-10deg);
+  box-shadow: 4px 4px 0 var(--black);
+  cursor: pointer;
+  transition: transform .15s, background .15s, box-shadow .15s;
+  margin-top: 4px;
+}
+.contact-btn-submit:hover {
+  background: var(--black);
+  color: var(--white);
+  transform: skewX(-10deg) translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--red);
+}
 /* FORCE ABOUT HIGHLIGHT TEXT TO WHITE */
 #screen-about .about-highlight {
   color: #ffffff !important;
   background: #050505 !important;
-}
-/* BGM Toggle */
-#bgm-toggle,
-#audio-toggle {
-  position: fixed;
-  right: 25px;
-  bottom: 35px;
-  z-index: 99999;
-
-  width: 50px;
-  height: 42px;
-
-  background: #000;
-  color: #fff;
-
-  border: 2px solid #fff;
-  box-shadow: 5px 5px 0 var(--red);
-
-  font-size: 18px;
-  font-weight: bold;
-
-  cursor: pointer;
-}
-
-#audio-toggle:hover {
-  transform: translate(3px, 3px);
-  box-shadow: 2px 2px 0 var(--red);
 }
 #clock {
   color: #fff !important;
