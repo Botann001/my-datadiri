@@ -6,7 +6,7 @@ Portofolio interaktif bergaya menu Persona (Persona-style interactive web portfo
 
 - Profil & Tentang Botan
 - Keahlian Pemrograman & Web (PHP, Python, Java, HTML, Eksplorasi Hardware)
-- Proyek Pilihan (MAN 2 HSU, Project Bucin)
+- Proyek Pilihan (MAN 2 HSU, Project Bucin, Velvet Task)
 - Kontak (Email, GitHub, Instagram, & Form Kirim Pesan)
 
 ## Menjalankan secara lokal

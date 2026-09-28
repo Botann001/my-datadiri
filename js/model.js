@@ -29,6 +29,16 @@ const Model = {
       img: "assets/projects/project-bucin.svg",
       desc: "Aplikasi web interaktif bertema bucin yang playful dengan animasi GIF, tombol responsif, dan interaksi seru.",
     },
+    {
+      title: "VELVET TASK",
+      tag: "To-Do Tracker",
+      color: "#0055ff",
+      live: true,
+      url: "https://oktamaulana01.github.io/velvet-task/",
+      cta: "Buka aplikasi →",
+      img: "assets/projects/velvet-task.svg",
+      desc: "Aplikasi to-do tracker interaktif bertema Persona 5 & Velvet Room dengan streak counter, sound effects (SFX), dan sistem kontrak.",
+    },
   ],
 
   langColors: {
