@@ -1,150 +1,153 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0b0b0d">
-  <meta name="description" content="Portofolio Muhammad Okta Maulana, Sarjana Sistem Informasi dan pengembang web.">
-  <title>Muhammad Okta Maulana · Portofolio</title>
+  <meta name="description" content="Portofolio Botan, Mahasiswa Sistem dan pengembang aplikasi.">
+  <title>Botan · Portofolio</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body data-screen="home">
 
-<div id="bg" aria-hidden="true">
-  <div class="bg-layer" id="bg-stripes"></div>
-  <svg class="bg-star" style="left:6%;top:8%;width:26vmax;height:26vmax" viewBox="0 0 100 100">
-    <polygon points="50,0 60,35 98,35 68,57 78,94 50,72 22,94 32,57 2,35 40,35" fill="#000"/>
-  </svg>
-  <svg class="bg-star s2" style="right:4%;bottom:6%;width:34vmax;height:34vmax" viewBox="0 0 100 100">
-    <polygon points="50,0 60,35 98,35 68,57 78,94 50,72 22,94 32,57 2,35 40,35" fill="#fff"/>
-  </svg>
-  <img class="menu-art" id="art-home" src="assets/menus/home.jpg" alt=""
-       onload="document.body.classList.add('has-art-home')" onerror="this.remove()">
-  <img class="menu-art" id="art-about" src="assets/menus/about.jpg" alt=""
-       onload="document.body.classList.add('has-art-about')" onerror="this.remove()">
-  <img class="menu-art" id="art-contact" src="assets/menus/contact.jpg" alt=""
-       onload="document.body.classList.add('has-art-contact')" onerror="this.remove()">
-  <div class="bg-layer" id="bg-halftone"></div>
-  <div class="bg-layer" id="bg-vignette"></div>
-</div>
-
-<div id="slash" aria-hidden="true"></div>
-
-<div id="wipe" aria-hidden="true">
-  <div class="pane p3"></div>
-  <div class="pane p2"></div>
-  <div class="pane p1"></div>
-  <div class="flash"></div>
-</div>
-
-<div id="cursor" aria-hidden="true"></div>
-<audio id="sfx-select" src="assets/sfx/select.mp3" preload="auto"></audio>
-<audio id="bgm-player" src="assets/sfx/color-your-night.mp4" autoplay loop preload="auto"></audio>
-
-<button id="bgm-toggle" class="bgm-control" title="Putar / Heningkan Musik (Color Your Night)" aria-label="Toggle Musik Latar">
-  <span class="bgm-icon">▶</span>
-  <span class="bgm-label">BGM: OFF</span>
-</button>
-
-<div id="shell">
-  <div id="hud-top">
-    <div class="hud-tag">Portofolio // Muhammad Okta Maulana</div>
-    <div class="hud-tag alt">Indonesia · Sistem Informasi</div>
+  <div id="bg" aria-hidden="true">
+    <div class="bg-layer" id="bg-stripes"></div>
+    <svg class="bg-star" style="left:6%;top:8%;width:26vmax;height:26vmax" viewBox="0 0 100 100">
+      <polygon points="50,0 60,35 98,35 68,57 78,94 50,72 22,94 32,57 2,35 40,35" fill="#000" />
+    </svg>
+    <svg class="bg-star s2" style="right:4%;bottom:6%;width:34vmax;height:34vmax" viewBox="0 0 100 100">
+      <polygon points="50,0 60,35 98,35 68,57 78,94 50,72 22,94 32,57 2,35 40,35" fill="#fff" />
+    </svg>
+    <img class="menu-art" id="art-home" src="assets/menus/home.jpg" alt=""
+      onload="document.body.classList.add('has-art-home')" onerror="this.remove()">
+    <img class="menu-art" id="art-about" src="assets/menus/about.jpg" alt=""
+      onload="document.body.classList.add('has-art-about')" onerror="this.remove()">
+    <img class="menu-art" id="art-contact" src="assets/menus/contact.jpg" alt=""
+      onload="document.body.classList.add('has-art-contact')" onerror="this.remove()">
+    <div class="bg-layer" id="bg-halftone"></div>
+    <div class="bg-layer" id="bg-vignette"></div>
   </div>
 
-  <div id="stage">
-    <section class="screen active" id="screen-home" aria-label="Menu utama">
-      <div id="intro-eyebrow">Selamat datang di portofolio saya</div>
-      <h1 id="big-name" aria-label="Muhammad Okta Maulana">
-        <span class="ransom" data-ransom="MUHAMMAD"></span>
-        <span class="ransom" data-ransom="OKTA MAULANA"></span>
-      </h1>
-      <p id="tagline">
-        4th-year Electronics and Communication Engineering student with a strong interest in programming, electronics, embedded systems, and hardware exploration.
-      </p>
-      <nav id="menu" aria-label="Bagian portofolio">
-        <button class="menu-item sel" data-target="projects">
-          <span class="ransom" data-ransom="PROYEK"></span><span class="cursor-mark">◀</span>
-        </button>
-        <button class="menu-item" data-target="skills">
-          <span class="ransom" data-ransom="KEAHLIAN"></span><span class="cursor-mark">◀</span>
-        </button>
-        <button class="menu-item" data-target="about">
-          <span class="ransom" data-ransom="TENTANG"></span><span class="cursor-mark">◀</span>
-        </button>
-        <button class="menu-item" data-target="contact">
-          <span class="ransom" data-ransom="KONTAK"></span><span class="cursor-mark">◀</span>
-        </button>
-      </nav>
-    </section>
+  <div id="slash" aria-hidden="true"></div>
 
-    <section class="screen sub" id="screen-projects" aria-label="Proyek">
-      <div class="screen-head"><span class="ransom" data-ransom="PROYEK"></span></div>
-      <button class="back-hint" data-back>ESC · Kembali</button>
-      <div class="grid-label"><span class="bar"></span>Proyek pilihan</div>
-      <div id="feat-grid" class="grid"></div>
-    </section>
-
-    <section class="screen sub" id="screen-skills" aria-label="Keahlian">
-      <div class="screen-head"><span class="ransom" data-ransom="KEAHLIAN"></span></div>
-      <button class="back-hint" data-back>ESC · Kembali</button>
-      <div id="skills-body"></div>
-    </section>
-
-    <section class="screen sub align-right" id="screen-about" aria-label="Tentang saya">
-      <div class="screen-head"><span class="ransom" data-ransom="TENTANG"></span></div>
-      <button class="back-hint" data-back>ESC · Kembali</button>
-
-      <div class="paper">
-        <p class="quote">
-          4th-year <strong class="about-highlight">Electronics and Communication Engineering</strong> student with a strong interest in programming, electronics, embedded systems, and hardware exploration.
-        </p>
-        <br>
-        <p>
-          I enjoy building practical projects that combine hardware and software, working with <strong class="about-highlight">Raspberry Pi, Python</strong>, circuit simulation, digital electronics, and signal visualization.
-        </p>
-        <br>
-        <p>
-          I am passionate about learning by experimenting, solving technical problems, and <strong class="about-highlight">turning ideas into working projects.</strong>
-        </p>
-        <br>
-        <p class="about-quote"><strong>Learning by experimenting, solving technical problems, and turning ideas into working projects.</strong></p>
-      </div>
-    </section>
-
-    <section class="screen sub align-right" id="screen-contact" aria-label="Kontak">
-      <div class="screen-head"><span class="ransom" data-ransom="KONTAK"></span></div>
-      <button class="back-hint" data-back>ESC · Kembali</button>
-      <div class="paper" style="max-width:620px">
-        <p>
-          Saya terbuka untuk <strong>diskusi, kolaborasi, dan kesempatan baru</strong>
-          dalam pengembangan web serta sistem informasi. Hubungi saya melalui WhatsApp
-          untuk memulai percakapan.
-        </p>
-      </div>
-      <div class="contact-list">
-        <a class="contact-chip" href="https://wa.me/6282237175894" target="_blank" rel="noopener">
-          <span>WhatsApp · 0822 3717 5894 ↗</span>
-        </a>
-        <a class="contact-chip" href="https://man2hsu.my.id" target="_blank" rel="noopener">
-          <span>MAN 2 HSU ↗</span>
-        </a>
-      </div>
-    </section>
+  <div id="wipe" aria-hidden="true">
+    <div class="pane p3"></div>
+    <div class="pane p2"></div>
+    <div class="pane p1"></div>
+    <div class="flash"></div>
   </div>
 
-  <div id="hud-bottom">
-    <span><span class="key">↑↓</span>Pilih</span>
-    <span><span class="key">Enter</span>Buka</span>
-    <span><span class="key">Esc</span>Kembali</span>
-    <span><span class="key">M</span>Musik</span>
-    <span style="margin-left:auto;opacity:.8" id="clock"></span>
-  </div>
-</div>
+  <div id="cursor" aria-hidden="true"></div>
+  <audio id="sfx-select" src="assets/sfx/select.mp3" preload="auto"></audio>
+  <audio id="bgm-player" src="assets/sfx/color-your-night.mp4" autoplay loop preload="auto"></audio>
 
-<script src="js/model.js" defer></script>
-<script src="js/view.js" defer></script>
-<script src="js/controller.js" defer></script>
+  <button id="bgm-toggle" class="bgm-control" title="Putar / Heningkan Musik (Color Your Night)"
+    aria-label="Toggle Musik Latar">
+    <span class="bgm-icon">▶</span>
+    <span class="bgm-label">BGM: OFF</span>
+  </button>
+
+  <div id="shell">
+    <div id="hud-top">
+      <div class="hud-tag">Portofolio // Botan</div>
+      <div class="hud-tag alt">Sistem · Developer</div>
+    </div>
+
+    <div id="stage">
+      <section class="screen active" id="screen-home" aria-label="Menu utama">
+        <div id="intro-eyebrow">Selamat datang di portofolio saya</div>
+        <h1 id="big-name" aria-label="Botan">
+          <span class="ransom" data-ransom="BOTAN"></span>
+        </h1>
+        <p id="tagline">
+          Mahasiswa tahun ke-4 Sistem dengan minat yang kuat dalam pemrograman, dan eksplorasi perangkat keras.
+        </p>
+        <nav id="menu" aria-label="Bagian portofolio">
+          <button class="menu-item sel" data-target="projects">
+            <span class="ransom" data-ransom="PROYEK"></span><span class="cursor-mark">◀</span>
+          </button>
+          <button class="menu-item" data-target="skills">
+            <span class="ransom" data-ransom="KEAHLIAN"></span><span class="cursor-mark">◀</span>
+          </button>
+          <button class="menu-item" data-target="about">
+            <span class="ransom" data-ransom="TENTANG"></span><span class="cursor-mark">◀</span>
+          </button>
+          <button class="menu-item" data-target="contact">
+            <span class="ransom" data-ransom="KONTAK"></span><span class="cursor-mark">◀</span>
+          </button>
+        </nav>
+      </section>
+
+      <section class="screen sub" id="screen-projects" aria-label="Proyek">
+        <div class="screen-head"><span class="ransom" data-ransom="PROYEK"></span></div>
+        <button class="back-hint" data-back>ESC · Kembali</button>
+        <div class="grid-label"><span class="bar"></span>Proyek pilihan</div>
+        <div id="feat-grid" class="grid"></div>
+      </section>
+
+      <section class="screen sub" id="screen-skills" aria-label="Keahlian">
+        <div class="screen-head"><span class="ransom" data-ransom="KEAHLIAN"></span></div>
+        <button class="back-hint" data-back>ESC · Kembali</button>
+        <div id="skills-body"></div>
+      </section>
+
+      <section class="screen sub align-right" id="screen-about" aria-label="Tentang saya">
+        <div class="screen-head"><span class="ransom" data-ransom="TENTANG"></span></div>
+        <button class="back-hint" data-back>ESC · Kembali</button>
+
+        <div class="paper">
+          <p class="quote">
+            <strong class="about-highlight">Mahasiswa tahun ke-4 Sistem</strong> dengan minat yang kuat dalam pemrograman, dan eksplorasi perangkat keras.
+          </p>
+          <br>
+          <p>
+            Saya senang membangun proyek praktis bekerja dengan <strong class="about-highlight">Php, Python, Java, dan HTML.</strong>
+          </p>
+          <br>
+          <p>
+            Saya bersemangat untuk belajar melalui eksperimen, memecahkan masalah teknis, dan <strong class="about-highlight">mengubah ide menjadi proyek yang berfungsi.</strong>
+          </p>
+          <br>
+          <p class="about-quote"><strong>Belajar melalui eksperimen, memecahkan masalah teknis, dan mengubah ide menjadi proyek yang berfungsi.</strong></p>
+        </div>
+      </section>
+
+      <section class="screen sub align-right" id="screen-contact" aria-label="Kontak">
+        <div class="screen-head"><span class="ransom" data-ransom="KONTAK"></span></div>
+        <button class="back-hint" data-back>ESC · Kembali</button>
+        <div class="paper" style="max-width:620px">
+          <p>
+            Saya terbuka untuk <strong>diskusi, kolaborasi, dan kesempatan baru</strong>
+            dalam pengembangan web serta sistem informasi. Hubungi saya melalui WhatsApp
+            untuk memulai percakapan.
+          </p>
+        </div>
+        <div class="contact-list">
+          <a class="contact-chip" href="https://wa.me/6282237175894" target="_blank" rel="noopener">
+            <span>WhatsApp · 0822 3717 5894 ↗</span>
+          </a>
+          <a class="contact-chip" href="https://man2hsu.my.id" target="_blank" rel="noopener">
+            <span>MAN 2 HSU ↗</span>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <div id="hud-bottom">
+      <span><span class="key">↑↓</span>Pilih</span>
+      <span><span class="key">Enter</span>Buka</span>
+      <span><span class="key">Esc</span>Kembali</span>
+      <span><span class="key">M</span>Musik</span>
+      <span style="margin-left:auto;opacity:.8" id="clock"></span>
+    </div>
+  </div>
+
+  <script src="js/model.js" defer></script>
+  <script src="js/view.js" defer></script>
+  <script src="js/controller.js" defer></script>
 </body>
+
 </html>

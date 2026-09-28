@@ -39,19 +39,20 @@ const Model = {
 
   skills: [
     {
-      group: "Pengembangan Web",
+      group: "Pemrograman & Web",
       items: [
-        ["PHP Native", 88],
+        ["PHP", 88],
+        ["Python", 86],
+        ["Java", 82],
         ["HTML", 90],
-        ["MySQL", 84],
       ],
     },
     {
-      group: "Pendekatan Kerja",
+      group: "Keahlian & Pendekatan",
       items: [
-        ["Vibe Coding", 88],
-        ["Analisis Sistem", 82],
-        ["Pemecahan Masalah", 86],
+        ["Eksplorasi Perangkat Keras", 85],
+        ["Analisis Sistem", 84],
+        ["Pemecahan Masalah", 88],
       ],
     },
   ],

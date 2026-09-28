@@ -62,6 +62,7 @@ const View = {
 
 // Huruf aksen khusus pada nama utama
 if (
+  (text === "BOTAN" && (i === 0 || i === 2)) ||
   (text === "MUHAMMAD" && i === 0) ||
   (text === "OKTA MAULANA" && i === 5)
 ) {
