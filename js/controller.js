@@ -13,16 +13,29 @@ const Controller = {
     this.bindKeyboard();
     this.bindAudioUnlock();
     this.bindBgm();
+    this.bindHistory();
     this.tryAutoPlayBgm();
   },
 
   /* ---------- Navigation ---------- */
-goTo(screen) { 
-  if (this.transitioning || screen === Model.state.screen) return; 
-  this.transitioning = true; 
-  this.play(); 
+  goTo(screen, pushHistory = true) { 
+    if (screen === Model.state.screen) return; 
+    this.play(); 
 
-  View.wipe( 
+    if (pushHistory) {
+      const targetHash = screen === "home" ? "" : `#${screen}`;
+      const newUrl = window.location.pathname + window.location.search + targetHash;
+      history.pushState({ screen }, "", newUrl);
+    }
+
+    const targetIdx = View.els.menuItems.findIndex(m => m.dataset.target === screen);
+    if (targetIdx !== -1) {
+      Model.state.menuIndex = targetIdx;
+      View.setMenuSelection(targetIdx);
+    }
+
+    this.transitioning = true; 
+    View.wipe( 
       () => {                       // mid-wipe: swap screens while covered
         Model.state.screen = screen;
         View.showScreen(screen);
@@ -39,6 +52,38 @@ goTo(screen) {
     if (next !== Model.state.menuIndex) this.play();
     Model.state.menuIndex = next;
     View.setMenuSelection(next);
+  },
+
+  /* ---------- History & Hash Navigation ---------- */
+  getScreenFromHash() {
+    const hash = window.location.hash.replace("#", "").toLowerCase();
+    const validScreens = ["home", "projects", "skills", "about", "contact"];
+    return validScreens.includes(hash) ? hash : "home";
+  },
+
+  bindHistory() {
+    const initialScreen = this.getScreenFromHash();
+    const currentUrl = window.location.pathname + window.location.search + (initialScreen === "home" ? "" : `#${initialScreen}`);
+    history.replaceState({ screen: initialScreen }, "", currentUrl);
+
+    if (initialScreen !== "home") {
+      Model.state.screen = initialScreen;
+      View.showScreen(initialScreen);
+      if (initialScreen === "projects") this.loadProjects();
+      if (initialScreen === "skills") this.loadSkills();
+      const targetIdx = View.els.menuItems.findIndex(m => m.dataset.target === initialScreen);
+      if (targetIdx !== -1) {
+        Model.state.menuIndex = targetIdx;
+        View.setMenuSelection(targetIdx);
+      }
+    }
+
+    window.addEventListener("popstate", (e) => {
+      const targetScreen = (e.state && e.state.screen) ? e.state.screen : this.getScreenFromHash();
+      if (targetScreen !== Model.state.screen) {
+        this.goTo(targetScreen, false);
+      }
+    });
   },
 
   /* ---------- Screen data loading ---------- */
@@ -157,7 +202,13 @@ goTo(screen) {
     });
 
     document.querySelectorAll("[data-back]").forEach(b =>
-      b.addEventListener("click", () => this.goTo("home")));
+      b.addEventListener("click", () => {
+        if (window.location.hash && window.history.length > 1) {
+          window.history.back();
+        } else {
+          this.goTo("home");
+        }
+      }));
 
     // Clicking the name always takes you home
     document.getElementById("big-name").addEventListener("click", () => {
@@ -168,14 +219,27 @@ goTo(screen) {
 
   bindKeyboard() {
     addEventListener("keydown", e => {
+      // Abaikan jika fokus pada elemen form
+      const isInput = e.target && (
+        e.target.tagName === "INPUT" ||
+        e.target.tagName === "TEXTAREA" ||
+        e.target.isContentEditable
+      );
+      if (isInput) return;
+
       if (Model.state.screen === "home") {
         if (e.key === "ArrowDown") { this.select(Model.state.menuIndex + 1); e.preventDefault(); }
         else if (e.key === "ArrowUp") { this.select(Model.state.menuIndex - 1); e.preventDefault(); }
         else if (e.key === "Enter") {
           this.goTo(View.els.menuItems[Model.state.menuIndex].dataset.target);
         }
-      } else if (e.key === "Escape") {
-        this.goTo("home");
+      } else if (e.key === "Escape" || e.key === "Backspace") {
+        e.preventDefault();
+        if (window.location.hash && window.history.length > 1) {
+          window.history.back();
+        } else {
+          this.goTo("home");
+        }
       }
       if (e.key === "m" || e.key === "M") {
         this.toggleBgm();
