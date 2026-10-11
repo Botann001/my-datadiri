@@ -417,7 +417,7 @@ body[data-screen]:not([data-screen="home"]) #hero-art{
   opacity:0;will-change:transform;pointer-events:none;
   transition:opacity .55s ease;
 }
-body[data-screen="home"]     #art-home,
+body[data-screen="home"]     #home-video,
 body[data-screen="projects"] #art-projects,
 body[data-screen="skills"]   #art-skills,
 body[data-screen="about"]    #art-about,
@@ -568,10 +568,7 @@ body[data-screen]:not([data-screen="home"]) #home-video {
   opacity: 0;
 }
 
-/* Sembunyikan gambar statis jika video siap diputar */
-body.has-video-home #art-home {
-  display: none !important;
-}
+
 
 /* Keep portfolio text/menu above the video */
 #shell {

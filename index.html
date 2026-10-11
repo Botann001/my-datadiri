@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body data-screen="home">
+<body class="has-art-home" data-screen="home">
 
   <div id="bg" aria-hidden="true">
     <div class="bg-layer" id="bg-stripes"></div>
@@ -21,12 +21,9 @@
     <svg class="bg-star s2" style="right:4%;bottom:6%;width:34vmax;height:34vmax" viewBox="0 0 100 100">
       <polygon points="50,0 60,35 98,35 68,57 78,94 50,72 22,94 32,57 2,35 40,35" fill="#fff" />
     </svg>
-    <video class="menu-art" id="home-video" autoplay loop muted playsinline webkit-playsinline preload="auto" poster="assets/menus/home-video-poster.jpg"
-      oncanplay="document.body.classList.add('has-art-home', 'has-video-home')">
+    <video class="menu-art" id="home-video" autoplay loop muted playsinline webkit-playsinline preload="auto" poster="assets/menus/home-video-poster.jpg">
       <source src="assets/menus/home-video.mp4" type="video/mp4">
     </video>
-    <img class="menu-art" id="art-home" src="assets/menus/home.jpg" alt=""
-      onload="document.body.classList.add('has-art-home')" onerror="this.remove()">
     <img class="menu-art" id="art-skills" src="assets/menus/skills.jpg" alt=""
       onload="document.body.classList.add('has-art-skills')" onerror="this.remove()">
     <img class="menu-art" id="art-about" src="assets/menus/about.jpg" alt=""
