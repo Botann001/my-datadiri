@@ -18,15 +18,6 @@ body{
 .display{font-family:'Archivo Black','Arial Black',Impact,sans-serif;}
 
 /* ---------- HOME BACKGROUND VIDEO ---------- */
-#home-video{
-  position:fixed;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  z-index:0;
-  pointer-events:none;
-}
 
 /* ============ BACKGROUND LAYERS ============ */
 #bg{position:fixed;inset:-6vmax;z-index:1;pointer-events:none;}
@@ -552,27 +543,35 @@ body.has-art-home #big-name .ch:not(.box):not(.boxw){
   *,*::before,*::after{animation-duration:.001s !important;transition-duration:.001s !important;}
 }
 /* =========================================================
-   VIDEO ONLY ON HOME
+   HOME BACKGROUND VIDEO (Persona 3 Reload Animated Loop)
    ========================================================= */
 
-/* Put video above the normal background */
 #home-video {
-  position: fixed;
+  position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
+  opacity: 0;
   pointer-events: none;
+  transition: opacity .55s ease;
+  z-index: 0;
 }
 
-/* Hide video on every screen except Home */
+body[data-screen="home"] #home-video {
+  opacity: 1;
+  display: block;
+}
+
 body[data-screen]:not([data-screen="home"]) #home-video {
   display: none !important;
+  opacity: 0;
 }
 
-/* Hide ONLY the old Home picture */
-body[data-screen="home"] #art-home { display:block !important; }
+/* Sembunyikan gambar statis jika video siap diputar */
+body.has-video-home #art-home {
+  display: none !important;
+}
 
 /* Keep portfolio text/menu above the video */
 #shell {

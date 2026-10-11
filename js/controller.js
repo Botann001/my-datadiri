@@ -41,6 +41,11 @@ const Controller = {
         View.showScreen(screen);
         if (screen === "projects") this.loadProjects();
         if (screen === "skills") this.loadSkills();
+        const homeVid = document.getElementById("home-video");
+        if (homeVid) {
+          if (screen === "home") homeVid.play().catch(() => {});
+          else homeVid.pause();
+        }
       },
       () => { this.transitioning = false; }
     );
@@ -179,6 +184,10 @@ const Controller = {
   bindAudioUnlock() {
     const unlock = () => {
       this.audioUnlocked = true;
+      const homeVid = document.getElementById("home-video");
+      if (homeVid && Model.state.screen === "home" && homeVid.paused) {
+        homeVid.play().catch(() => {});
+      }
       if (!Model.state.bgmPlaying) {
         const p = View.playBgm();
         if (p && p.then) {
