@@ -14,6 +14,7 @@ const Controller = {
     this.bindAudioUnlock();
     this.bindBgm();
     this.bindHistory();
+    this.bindHomeVideo();
     this.tryAutoPlayBgm();
   },
 
@@ -88,6 +89,25 @@ const Controller = {
       if (targetScreen !== Model.state.screen) {
         this.goTo(targetScreen, false);
       }
+    });
+  },
+
+  bindHomeVideo() {
+    const video = document.getElementById("home-video");
+    if (!video) return;
+
+    const LOOP_START = 2.4;
+    const LOOP_END = 16.2;
+
+    video.addEventListener("timeupdate", () => {
+      if (video.currentTime >= LOOP_END) {
+        video.currentTime = LOOP_START;
+      }
+    });
+
+    video.addEventListener("ended", () => {
+      video.currentTime = LOOP_START;
+      video.play().catch(() => {});
     });
   },
 
