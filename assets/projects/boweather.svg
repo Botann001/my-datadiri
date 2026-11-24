@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="weatherGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="50%" stop-color="#0055ff"/>
+      <stop offset="100%" stop-color="#ff2f3d"/>
+    </linearGradient>
+    <linearGradient id="snowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#b0e0ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="#0b0b0d"/>
+  
+  <!-- Persona cut-out angled stripes -->
+  <path d="M-80 540L820-80h480L440 730z" fill="url(#weatherGrad)"/>
+  <path d="M720-30h520v140L510 675H90z" fill="#0088ff" opacity=".4"/>
+  <path d="M280 700L960 50h100L380 700z" fill="#ffffff" opacity=".18"/>
+
+  <!-- Desktop Window & Snow Physics emblem badge -->
+  <g transform="translate(915, 115)">
+    <!-- Window frame -->
+    <rect x="0" y="30" width="160" height="110" rx="10" fill="#0b0b0d" stroke="#ffffff" stroke-width="5"/>
+    <rect x="0" y="30" width="160" height="26" rx="8" fill="#1c2538"/>
+    <!-- Window buttons -->
+    <circle cx="16" cy="43" r="4" fill="#ff5f56"/>
+    <circle cx="28" cy="43" r="4" fill="#ffbd2e"/>
+    <circle cx="40" cy="43" r="4" fill="#27c93f"/>
+    <!-- Pillowy snow blanket on titlebar -->
+    <path d="M-6 32 C 15 15, 30 18, 50 26 C 70 12, 100 14, 120 25 C 140 16, 155 20, 166 32 Z" fill="url(#snowGrad)"/>
+    <!-- Snowflake icon inside window -->
+    <g transform="translate(80, 85)" stroke="#00e5ff" stroke-width="3" stroke-linecap="round">
+      <line x1="0" y1="-20" x2="0" y2="20"/>
+      <line x1="-18" y1="-10" x2="18" y2="10"/>
+      <line x1="-18" y1="10" x2="18" y2="-10"/>
+      <circle cx="0" cy="0" r="4" fill="#00e5ff"/>
+    </g>
+  </g>
+
+  <!-- Typography -->
+  <g fill="#fff" font-family="Arial Black,Impact,sans-serif">
+    <text x="70" y="120" font-size="32" letter-spacing="8">INTERACTIVE DESKTOP WEATHER</text>
+    <text x="70" y="260" font-size="88">BOWEATHER</text>
+    <text x="74" y="325" font-size="28" letter-spacing="4" fill="#00e5ff">WINDOW PHYSICS · SNOWY &amp; KOIART</text>
+  </g>
+  <rect x="72" y="375" width="540" height="8" fill="#fff"/>
+  <text x="72" y="440" fill="#fff" font-size="26" font-family="Arial,sans-serif">C# · .NET · WPF · Windows Physics · Transparent UI</text>
+  
+  <!-- Action arrow badge -->
+  <circle cx="1030" cy="505" r="105" fill="#fff"/>
+  <path d="M985 505h96m-35-35 35 35-35 35" fill="none" stroke="#0b0b0d" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

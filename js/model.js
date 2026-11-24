@@ -10,14 +10,14 @@ const Model = {
 
   featured: [
     {
-      title: "MAN 2 HULU SUNGAI UTARA",
-      tag: "Website Sekolah",
-      color: "#ff2f3d",
+      title: "BOWEATHER",
+      tag: "Desktop App",
+      color: "#00d2ff",
       live: true,
-      url: "https://man2hsu.my.id",
-      cta: "Kunjungi website →",
-      img: "assets/projects/man2hsu.svg",
-      desc: "Pusat informasi digital madrasah yang menyajikan profil dan informasi sekolah dalam satu website yang mudah diakses.",
+      url: "https://github.com/Botann001/BoWeather",
+      cta: "Lihat di GitHub →",
+      img: "assets/projects/boweather.svg",
+      desc: "Aplikasi desktop interaktif Windows dengan efek cuaca transparan, fisika jendela (window physics), dan simulasi salju volumetrik.",
     },
     {
       title: "PROJECT BUCIN",
@@ -49,12 +49,26 @@ const Model = {
       img: "assets/projects/pomodoro-palace.svg",
       desc: "Aplikasi Pomodoro timer bertema Persona 5 dengan mode Focus/Break, day streak counter, dan efek suara interaktif.",
     },
+    {
+      title: "MUSIKKU",
+      tag: "Aplikasi Android",
+      color: "#b537f2",
+      live: true,
+      url: "https://github.com/Botann001/MusikKu",
+      cta: "Lihat di GitHub →",
+      img: "assets/projects/musikku.svg",
+      desc: "Aplikasi pemutar musik Android modern dengan Jetpack Compose, Media3 ExoPlayer, background playback service, dan streaming Jamendo API.",
+    },
   ],
 
   langColors: {
     PHP: "#777bb4",
     HTML: "#e34c26",
     MySQL: "#00758f",
+    "C#": "#178600",
+    Kotlin: "#a97bff",
+    Python: "#3572A5",
+    JavaScript: "#f1e05a",
   },
 
   skills: [

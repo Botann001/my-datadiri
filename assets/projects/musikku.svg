@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="musikGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b537f2"/>
+      <stop offset="50%" stop-color="#8000ff"/>
+      <stop offset="100%" stop-color="#ff2f3d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="#0b0b0d"/>
+  
+  <!-- Persona cut-out angled stripes -->
+  <path d="M-80 540L820-80h480L440 730z" fill="url(#musikGrad)"/>
+  <path d="M720-30h520v140L510 675H90z" fill="#b537f2" opacity=".4"/>
+  <path d="M280 700L960 50h100L380 700z" fill="#ffffff" opacity=".18"/>
+
+  <!-- Soundwave / Equalizer / Vinyl emblem badge -->
+  <g transform="translate(920, 110)">
+    <!-- Vinyl record disc -->
+    <circle cx="80" cy="80" r="72" fill="#0b0b0d" stroke="#ffffff" stroke-width="6"/>
+    <circle cx="80" cy="80" r="54" fill="none" stroke="#33333d" stroke-width="3"/>
+    <circle cx="80" cy="80" r="38" fill="none" stroke="#33333d" stroke-width="3"/>
+    <circle cx="80" cy="80" r="24" fill="#b537f2"/>
+    <circle cx="80" cy="80" r="8" fill="#ffffff"/>
+    
+    <!-- Audio visualizer bars -->
+    <rect x="-35" y="110" width="8" height="42" fill="#ff2f3d" rx="4"/>
+    <rect x="-20" y="85" width="8" height="67" fill="#b537f2" rx="4"/>
+    <rect x="-5" y="100" width="8" height="52" fill="#ffffff" rx="4"/>
+  </g>
+
+  <!-- Typography -->
+  <g fill="#fff" font-family="Arial Black,Impact,sans-serif">
+    <text x="70" y="120" font-size="32" letter-spacing="8">ANDROID MUSIC PLAYER</text>
+    <text x="70" y="260" font-size="90">MUSIKKU</text>
+    <text x="74" y="325" font-size="28" letter-spacing="4" fill="#b537f2">JETPACK COMPOSE · MEDIA3 EXOPLAYER</text>
+  </g>
+  <rect x="72" y="375" width="520" height="8" fill="#fff"/>
+  <text x="72" y="440" fill="#fff" font-size="26" font-family="Arial,sans-serif">Kotlin · Jetpack Compose · AndroidX Media3 · Room DB</text>
+  
+  <!-- Action arrow badge -->
+  <circle cx="1030" cy="505" r="105" fill="#fff"/>
+  <path d="M985 505h96m-35-35 35 35-35 35" fill="none" stroke="#0b0b0d" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
