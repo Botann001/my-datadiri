@@ -561,6 +561,7 @@ body.has-art-home #big-name .ch:not(.box):not(.boxw){
   pointer-events: none;
   transition: opacity .55s ease;
   z-index: 0;
+  transform: scaleX(-1);
 }
 
 body[data-screen="home"] #home-video {

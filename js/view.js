@@ -238,8 +238,10 @@ el.appendChild(span);
       stripes.style.transform = `translate(${cx * 22}px, ${cy * 14}px)`;
       halftone.style.transform = `translate(${cx * -34}px, ${cy * -22}px)`;
       arts.forEach(a => {
-        if (a.isConnected)
-          a.style.transform = `translate(${cx * 14}px, ${cy * 9}px) scale(1.04)`;
+        if (a.isConnected) {
+          const flip = a.id === "home-video" ? "scaleX(-1) " : "";
+          a.style.transform = `translate(${cx * 14}px, ${cy * 9}px) ${flip}scale(1.04)`;
+        }
       });
       requestAnimationFrame(loop);
     };
