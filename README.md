@@ -1,22 +1,22 @@
-# Portofolio Botan
+# Botan's Portfolio
 
-Portofolio interaktif bergaya menu Persona (Persona-style interactive web portfolio).
+Interactive Persona-style web portfolio (Persona-style interactive web portfolio).
 
-## Isi portofolio
+## Contents
 
-- Profil & Tentang Botan
-- Keahlian Pemrograman & Web (PHP, Python, Java, HTML, Eksplorasi Hardware)
-- Proyek Pilihan (BoWeather, Project Bucin, Velvet Task, Pomodoro Palace, MusikKu)
-- Kontak (Email, GitHub, Instagram, & Form Kirim Pesan)
+- Profile & About Botan
+- Programming & Web Skills (PHP, Python, Java, HTML, Hardware Exploration)
+- Featured Projects (BoWeather, Project Bucin, Velvet Task, Pomodoro Palace, MusikKu)
+- Contact (Email, GitHub, Instagram, & Message Form)
 
-## Menjalankan secara lokal
+## Running Locally
 
-Gunakan ekstensi **Live Server** di VS Code:
+Using the **Live Server** extension in VS Code:
 
-1. Buka `index.html`.
-2. Klik kanan, lalu pilih **Open with Live Server**.
-3. Website akan terbuka di browser dan diperbarui otomatis saat file disimpan.
+1. Open `index.html`.
+2. Right-click and choose **Open with Live Server**.
+3. The website will open in your browser and automatically update when files are saved.
 
 ## GitHub Pages
 
-Unggah seluruh isi folder ini ke repository GitHub. Setelah itu buka **Settings → Pages**, pilih **Deploy from a branch**, lalu gunakan branch `main` dan folder `/ (root)`.
+Upload the contents of this folder to your GitHub repository. Then navigate to **Settings → Pages**, choose **Deploy from a branch**, and select the `main` branch with the `/ (root)` folder.

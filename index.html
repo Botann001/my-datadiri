@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0b0b0d">
-  <meta name="description" content="Portofolio Botan, Mahasiswa Sistem dan pengembang aplikasi.">
-  <title>Botan · Portofolio</title>
+  <meta name="description" content="Portfolio of Botan, 4th-year Information Systems student and software developer.">
+  <title>Botan · Portfolio</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/style.css?v=2.1">
+  <link rel="stylesheet" href="css/style.css?v=2.2">
 </head>
 
 <body class="has-art-home" data-screen="home">
@@ -47,61 +47,59 @@
   <audio id="sfx-select" src="assets/sfx/select.mp3" preload="auto"></audio>
   <audio id="bgm-player" src="assets/sfx/color-your-night.mp4" autoplay loop preload="auto"></audio>
 
-  <button id="bgm-toggle" class="bgm-control" title="Putar / Heningkan Musik (Color Your Night)"
-    aria-label="Toggle Musik Latar">
+  <button id="bgm-toggle" class="bgm-control" title="Play / Mute Music (Color Your Night)"
+    aria-label="Toggle Background Music">
     <span class="bgm-icon">▶</span>
     <span class="bgm-label">BGM: OFF</span>
   </button>
 
   <div id="shell">
     <div id="hud-top">
-      <div class="hud-tag">Portofolio // Botan</div>
-      <div class="hud-tag alt">Sistem · Developer</div>
+      <div class="hud-tag">Portfolio // Botan</div>
+      <div class="hud-tag alt">Systems · Developer</div>
     </div>
 
     <div id="stage">
-      <section class="screen active" id="screen-home" aria-label="Menu utama">
-        <div id="intro-eyebrow">Selamat datang di portofolio saya</div>
+      <section class="screen active" id="screen-home" aria-label="Main menu">
+        <div id="intro-eyebrow">Welcome to my portfolio</div>
         <h1 id="big-name" aria-label="Botan">
           <span class="ransom" data-ransom="BOTAN"></span>
         </h1>
         <p id="tagline">
-          Mahasiswa tahun ke-4 Sistem dengan minat yang kuat dalam pemrograman, dan eksplorasi perangkat keras. Saya
-          senang membangun proyek praktis bekerja dengan Php, Python, Java, dan HTML. Saya bersemangat untuk belajar
-          melalui eksperimen, memecahkan masalah teknis, dan mengubah ide menjadi proyek yang berfungsi.
+          4th-year Information Systems student with a strong passion for programming and hardware exploration. I enjoy building practical projects with PHP, Python, Java, and HTML—learning through experimentation, solving technical challenges, and turning ideas into functional software.
         </p>
-        <nav id="menu" aria-label="Bagian portofolio">
+        <nav id="menu" aria-label="Portfolio sections">
           <button class="menu-item sel" data-target="projects">
-            <span class="ransom" data-ransom="PROYEK"></span><span class="cursor-mark">◀</span>
+            <span class="ransom" data-ransom="PROJECTS"></span><span class="cursor-mark">◀</span>
           </button>
           <button class="menu-item" data-target="skills">
-            <span class="ransom" data-ransom="KEAHLIAN"></span><span class="cursor-mark">◀</span>
+            <span class="ransom" data-ransom="SKILLS"></span><span class="cursor-mark">◀</span>
           </button>
           <button class="menu-item" data-target="about">
-            <span class="ransom" data-ransom="TENTANG"></span><span class="cursor-mark">◀</span>
+            <span class="ransom" data-ransom="ABOUT"></span><span class="cursor-mark">◀</span>
           </button>
           <button class="menu-item" data-target="contact">
-            <span class="ransom" data-ransom="KONTAK"></span><span class="cursor-mark">◀</span>
+            <span class="ransom" data-ransom="CONTACT"></span><span class="cursor-mark">◀</span>
           </button>
         </nav>
       </section>
 
-      <section class="screen sub" id="screen-projects" aria-label="Proyek">
-        <div class="screen-head"><span class="ransom" data-ransom="PROYEK"></span></div>
-        <button class="back-hint" data-back>ESC · Kembali</button>
-        <div class="grid-label"><span class="bar"></span>Proyek pilihan</div>
+      <section class="screen sub" id="screen-projects" aria-label="Projects">
+        <div class="screen-head"><span class="ransom" data-ransom="PROJECTS"></span></div>
+        <button class="back-hint" data-back>ESC · Back</button>
+        <div class="grid-label"><span class="bar"></span>Featured Projects</div>
         <div id="feat-grid" class="grid"></div>
       </section>
 
-      <section class="screen sub" id="screen-skills" aria-label="Keahlian">
-        <div class="screen-head"><span class="ransom" data-ransom="KEAHLIAN"></span></div>
-        <button class="back-hint" data-back>ESC · Kembali</button>
+      <section class="screen sub" id="screen-skills" aria-label="Skills">
+        <div class="screen-head"><span class="ransom" data-ransom="SKILLS"></span></div>
+        <button class="back-hint" data-back>ESC · Back</button>
         <div id="skills-body"></div>
       </section>
 
-      <section class="screen sub align-right" id="screen-about" aria-label="Tentang saya">
-        <div class="screen-head"><span class="ransom" data-ransom="TENTANG"></span></div>
-        <button class="back-hint" data-back>ESC · Kembali</button>
+      <section class="screen sub align-right" id="screen-about" aria-label="About me">
+        <div class="screen-head"><span class="ransom" data-ransom="ABOUT"></span></div>
+        <button class="back-hint" data-back>ESC · Back</button>
 
         <div class="paper">
           <figure class="about-photo">
@@ -172,9 +170,9 @@
         </div>
       </section>
 
-      <section class="screen sub align-right" id="screen-contact" aria-label="Kontak">
-        <div class="screen-head"><span class="ransom" data-ransom="KONTAK"></span></div>
-        <button class="back-hint" data-back>ESC · Kembali</button>
+      <section class="screen sub align-right" id="screen-contact" aria-label="Contact">
+        <div class="screen-head"><span class="ransom" data-ransom="CONTACT"></span></div>
+        <button class="back-hint" data-back>ESC · Back</button>
 
         <div class="paper" style="max-width:640px">
           <p>
@@ -204,16 +202,16 @@
           <form action="mailto:ocvaniespada@gmail.com" method="post" enctype="text/plain">
             <div class="contact-form-group">
               <label for="contact-name">NAME</label>
-              <input type="text" id="contact-name" name="Name" required placeholder="Nama Anda">
+              <input type="text" id="contact-name" name="Name" required placeholder="Your Name">
             </div>
             <div class="contact-form-group">
               <label for="contact-email">YOUR EMAIL</label>
-              <input type="email" id="contact-email" name="Email" required placeholder="email@contoh.com">
+              <input type="email" id="contact-email" name="Email" required placeholder="name@example.com">
             </div>
             <div class="contact-form-group">
               <label for="contact-msg">MESSAGE</label>
               <textarea id="contact-msg" name="Message" rows="3" required
-                placeholder="Tuliskan pesan Anda di sini..."></textarea>
+                placeholder="Write your message here..."></textarea>
             </div>
             <button type="submit" class="contact-btn-submit">
               SEND IT ▶
@@ -224,10 +222,10 @@
     </div>
 
     <div id="hud-bottom">
-      <span><span class="key">↑↓</span>Pilih</span>
-      <span><span class="key">Enter</span>Buka</span>
-      <span><span class="key">Esc</span>Kembali</span>
-      <span><span class="key">M</span>Musik</span>
+      <span><span class="key">↑↓</span>Select</span>
+      <span><span class="key">Enter</span>Open</span>
+      <span><span class="key">Esc</span>Back</span>
+      <span><span class="key">M</span>Music</span>
       <span style="margin-left:auto;opacity:.8" id="clock"></span>
     </div>
   </div>

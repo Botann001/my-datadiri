@@ -18,12 +18,12 @@
 
   <!-- Typography -->
   <g fill="#fff" font-family="Arial Black,Impact,sans-serif">
-    <text x="70" y="125" font-size="30" letter-spacing="6">PROYEK INTERAKTIF</text>
+    <text x="70" y="125" font-size="30" letter-spacing="6">INTERACTIVE WEB APP</text>
     <text x="70" y="260" font-size="90">PROJECT BUCIN</text>
     <text x="74" y="325" font-size="30" letter-spacing="4">INTERACTIVE LOVE WEB APP</text>
   </g>
   <rect x="72" y="375" width="450" height="8" fill="#fff"/>
-  <text x="72" y="440" fill="#fff" font-size="26" font-family="Arial,sans-serif">HTML · CSS · JavaScript Interaktif</text>
+  <text x="72" y="440" fill="#fff" font-size="26" font-family="Arial,sans-serif">HTML · CSS · Interactive JavaScript</text>
   
   <!-- Action arrow badge -->
   <circle cx="1030" cy="505" r="105" fill="#fff"/>

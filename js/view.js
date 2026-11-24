@@ -158,7 +158,7 @@ el.appendChild(span);
         <span class="lang" style="--lc:${f.color}">${f.tag}</span>
         <h3>${f.live ? '<span class="live-dot"></span>' : ""}${this.splitTitle(f.title)}</h3>
         <p>${f.desc}</p>
-        <div class="meta"><span>${f.live ? "ONLINE" : "PROYEK PILIHAN"}</span><span class="go">${f.cta}</span></div>`;
+        <div class="meta"><span>${f.live ? "ONLINE" : "FEATURED"}</span><span class="go">${f.cta}</span></div>`;
       this.els.featGrid.appendChild(a);
     });
   },
@@ -179,10 +179,10 @@ el.appendChild(span);
         ${this.cardThumb(img)}
         <span class="lang">${r.language || "Repo"}</span>
         <h3>${this.splitTitle(pretty)}</h3>
-        <p>${r.description || "Deskripsi proyek belum tersedia."}</p>
+        <p>${r.description || "Project description not available."}</p>
         <div class="meta">
           <span>★ ${r.stargazers_count || 0}</span>
-          <span class="go">Lihat di GitHub →</span>
+          <span class="go">View on GitHub →</span>
         </div>`;
       this.els.repoGrid.appendChild(a);
     });
@@ -219,7 +219,7 @@ el.appendChild(span);
   startClock() {
     setInterval(() => {
       this.els.clock.textContent =
-        new Date().toLocaleTimeString("id-ID", { hour: "2-digit", minute: "2-digit" }) + " · WITA";
+        new Date().toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: false }) + " · WITA";
     }, 1000);
   },
 

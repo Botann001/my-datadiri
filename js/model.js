@@ -1,4 +1,4 @@
-/* Data dan status aplikasi portofolio Muhammad Okta Maulana. */
+/* Portfolio application data and state for Muhammad Okta Maulana. */
 const Model = {
   state: {
     screen: "home",
@@ -15,19 +15,19 @@ const Model = {
       color: "#00d2ff",
       live: true,
       url: "https://github.com/Botann001/BoWeather",
-      cta: "Lihat di GitHub →",
+      cta: "View on GitHub →",
       img: "assets/projects/boweather.svg",
-      desc: "Aplikasi desktop interaktif Windows dengan efek cuaca transparan, fisika jendela (window physics), dan simulasi salju volumetrik.",
+      desc: "Interactive Windows desktop app featuring transparent weather effects, window physics, and volumetric snow simulation.",
     },
     {
       title: "PROJECT BUCIN",
-      tag: "Web Interaktif",
+      tag: "Interactive Web",
       color: "#ff4d79",
       live: true,
       url: "https://Botann001.github.io/project-bucin/",
-      cta: "Mainkan →",
+      cta: "Play Now →",
       img: "assets/projects/project-bucin.svg",
-      desc: "Aplikasi web interaktif bertema bucin yang playful dengan animasi GIF, tombol responsif, dan interaksi seru.",
+      desc: "Playful interactive web app featuring animated GIFs, responsive button mechanics, and engaging interactions.",
     },
     {
       title: "VELVET TASK",
@@ -35,9 +35,9 @@ const Model = {
       color: "#0055ff",
       live: true,
       url: "https://Botann001.github.io/velvet-task/",
-      cta: "Buka aplikasi →",
+      cta: "Launch App →",
       img: "assets/projects/velvet-task.svg",
-      desc: "Aplikasi to-do tracker interaktif bertema Persona 5 & Velvet Room dengan streak counter, sound effects (SFX), dan sistem kontrak.",
+      desc: "Interactive Persona 5 & Velvet Room themed to-do tracker with streak counters, sound effects (SFX), and contract system.",
     },
     {
       title: "POMODORO PALACE",
@@ -45,19 +45,19 @@ const Model = {
       color: "#ff2f3d",
       live: true,
       url: "https://Botann001.github.io/POMODORO-PALACE/",
-      cta: "Mulai fokus →",
+      cta: "Start Focus →",
       img: "assets/projects/pomodoro-palace.svg",
-      desc: "Aplikasi Pomodoro timer bertema Persona 5 dengan mode Focus/Break, day streak counter, dan efek suara interaktif.",
+      desc: "Persona 5 themed Pomodoro timer featuring Focus/Break intervals, daily streak counter, and interactive sound effects.",
     },
     {
       title: "MUSIKKU",
-      tag: "Aplikasi Android",
+      tag: "Android App",
       color: "#b537f2",
       live: true,
       url: "https://github.com/Botann001/MusikKu",
-      cta: "Lihat di GitHub →",
+      cta: "View on GitHub →",
       img: "assets/projects/musikku.svg",
-      desc: "Aplikasi pemutar musik Android modern dengan Jetpack Compose, Media3 ExoPlayer, background playback service, dan streaming Jamendo API.",
+      desc: "Modern Android music player built with Jetpack Compose, Media3 ExoPlayer, background playback service, and Jamendo API streaming.",
     },
   ],
 
@@ -73,7 +73,7 @@ const Model = {
 
   skills: [
     {
-      group: "PEMROGRAMAN & WEB",
+      group: "PROGRAMMING & WEB",
       items: [
         ["PHP", 88],
         ["PYTHON", 86],
@@ -91,18 +91,18 @@ const Model = {
       ],
     },
     {
-      group: "KEAHLIAN & REKAYASA",
+      group: "ENGINEERING & PROBLEM SOLVING",
       items: [
-        ["EKSPLORASI PERANGKAT KERAS", 85],
-        ["ANALISIS SISTEM", 84],
-        ["PEMECAHAN MASALAH", 88],
+        ["HARDWARE EXPLORATION", 85],
+        ["SYSTEMS ANALYSIS", 84],
+        ["PROBLEM SOLVING", 88],
       ],
     },
     {
       group: "SPOKEN LANGUAGES",
       items: [
-        ["BAHASA INDONESIA", 100],
-        ["BAHASA INGGRIS", 40],
+        ["INDONESIAN", 100],
+        ["ENGLISH", 40],
       ],
     },
   ],
