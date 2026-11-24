@@ -18,7 +18,7 @@
 
   <!-- Typography -->
   <g fill="#fff" font-family="Arial Black,Impact,sans-serif">
-    <text x="70" y="120" font-size="32" letter-spacing="8">PROYEK INTERAKTIF</text>
+    <text x="70" y="125" font-size="30" letter-spacing="6">PROYEK INTERAKTIF</text>
     <text x="70" y="260" font-size="90">PROJECT BUCIN</text>
     <text x="74" y="325" font-size="30" letter-spacing="4">INTERACTIVE LOVE WEB APP</text>
   </g>

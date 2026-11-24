@@ -321,16 +321,21 @@ body[data-screen]:not([data-screen="home"]) #hero-art{
 
 /* 2. Project card thumbnails */
 .card .thumb{
-  margin:-20px -22px 14px;height:150px;overflow:hidden;position:relative;
-  clip-path:polygon(0 0, 100% 0, 100% 82%, 0 100%);
+  margin:-20px -22px 14px;height:165px;overflow:hidden;position:relative;
+  clip-path:polygon(0 0, 100% 0, 100% 84%, 0 100%);
   background:var(--black);
 }
 .card .thumb img{
   width:100%;height:100%;object-fit:cover;
+  object-position:center top;
   filter:grayscale(.9) contrast(1.15);
   transition:filter .2s, transform .3s;
 }
-.card:hover .thumb img{filter:grayscale(0) contrast(1.05);transform:scale(1.05);}
+.card:hover .thumb img{
+  filter:grayscale(0) contrast(1.05);
+  transform:scale(1.04);
+  transform-origin:center top;
+}
 .card .thumb::after{
   content:"";position:absolute;inset:0;
   background:linear-gradient(115deg, transparent 78%, var(--red) 78.5%);

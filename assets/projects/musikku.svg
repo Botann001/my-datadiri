@@ -30,7 +30,7 @@
 
   <!-- Typography -->
   <g fill="#fff" font-family="Arial Black,Impact,sans-serif">
-    <text x="70" y="120" font-size="32" letter-spacing="8">ANDROID MUSIC PLAYER</text>
+    <text x="70" y="125" font-size="30" letter-spacing="6">ANDROID MUSIC PLAYER</text>
     <text x="70" y="260" font-size="90">MUSIKKU</text>
     <text x="74" y="325" font-size="28" letter-spacing="4" fill="#b537f2">JETPACK COMPOSE · MEDIA3 EXOPLAYER</text>
   </g>
